@@ -5900,6 +5900,15 @@ public final class Settings {
         public static final String FULL_GESTURE_NAVBAR = "full_gesture_navbar";
 
         /**
+         * enable or disable single handed mode
+         * @hide
+         */
+        public static final String ONE_HAND_MODE_ENABLED = "one_hand_mode_enabled";
+
+        /** @hide */
+        private static final Validator ONE_HAND_MODE_ENABLED_VALIDATOR = BOOLEAN_VALIDATOR;
+
+        /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *
@@ -6104,7 +6113,8 @@ public final class Settings {
             OMNI_DOZE_ON_CHARGE,
             USE_EDGE_SERVICE_FOR_GESTURES,
             SCREENRECORD_QUALITY_MODE,
-            RECENTS_COMPONENT
+            RECENTS_COMPONENT,
+            ONE_HAND_MODE_ENABLED
             // AICP Settings end
         };
 
@@ -6375,6 +6385,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(USE_EDGE_SERVICE_FOR_GESTURES);
             PRIVATE_SETTINGS.add(SCREENRECORD_QUALITY_MODE);
             PRIVATE_SETTINGS.add(RECENTS_COMPONENT);
+            PRIVATE_SETTINGS.add(ONE_HAND_MODE_ENABLED);
             // AICP Settings end
         }
 
@@ -6646,6 +6657,7 @@ public final class Settings {
             VALIDATORS.put(USE_EDGE_SERVICE_FOR_GESTURES,USE_EDGE_SERVICE_FOR_GESTURES_VALIDATOR);
             VALIDATORS.put(SCREENRECORD_QUALITY_MODE,SCREENRECORD_QUALITY_MODE_VALIDATOR);
             VALIDATORS.put(RECENTS_COMPONENT,RECENTS_COMPONENT_VALIDATOR);
+            VALIDATORS.put(ONE_HAND_MODE_ENABLED, ONE_HAND_MODE_ENABLED_VALIDATOR);
             // AICP Settings end
         }
 
