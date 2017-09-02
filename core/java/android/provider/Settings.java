@@ -5914,6 +5914,18 @@ public final class Settings {
         private static final Validator AUDIO_PANEL_VIEW_POSITION_VALIDATOR =
                 BOOLEAN_VALIDATOR;
 
+        /**
+         * Enable blocking wakelock
+         * @hide
+         */
+        public static final String WAKELOCK_BLOCKING_ENABLED = "wakelock_blocking_enabled";
+
+        /**
+         * List of wakelock blocks selected
+         * @hide
+         */
+        public static final String WAKELOCK_BLOCKING_LIST = "wakelock_blocking_list";
+
 
         /***************************
          * AICP System Settings end
