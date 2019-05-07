@@ -159,7 +159,7 @@ public class KeyguardSimPinView extends KeyguardPinBasedInputView {
     private void handleSubInfoChangeIfNeeded() {
         KeyguardUpdateMonitor monitor = KeyguardUpdateMonitor.getInstance(mContext);
         int subId = monitor.getNextSubIdForState(IccCardConstants.State.PIN_REQUIRED);
-        if (SubscriptionManager.isValidSubscriptionId(subId)) {
+        if (subId != mSubId && SubscriptionManager.isValidSubscriptionId(subId)) {
             mSubId = subId;
             mShowDefaultMessage = true;
             mRemainingAttempts = -1;
